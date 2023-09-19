@@ -4,6 +4,8 @@ Le mail de contact pour acheter la carte BSB LAN  : bsb@code-it.de
 > [!IMPORTANT]
 > Le fichier **BSB_LAN_custom_defs.h** peut être seulement si vous avez la même carte et PAC que moi. Dans le cas contraire, voir la vidéo.
 
+Librairie esp32 pour Arduino IDE : https://espressif.github.io/arduino-esp32/package_esp32_index.json
+
 La liste des codes à renseigner dans le BSB LAN pour l'envoi MQTT 
 700,710,712,1600,1610,8000,8003,8006,8410,8412,8820,8821,8830,8314,8700,8740,3113
 
