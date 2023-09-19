@@ -1,0 +1,195 @@
+############################################################
+##                         MQTT  BSB LAN                  ##
+############################################################
+- name: "Mode de chauffe"
+  unique_id: "esp_bsblan_700"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/700"
+
+- name: "Temp consigne confort"
+  unique_id: "esp_bsblan_710"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/710"
+  unit_of_measurement: °C
+  device_class: temperature
+  
+- name: "Temp consigne reduit"
+  unique_id: "esp_bsblan_712"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/712"
+  unit_of_measurement: °C
+  device_class: temperature
+
+- name: "Mode ESC"
+  unique_id: "esp_bsblan_1600"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/1600"
+
+- name: "Temp sonde exterieur"
+  state_topic: "BSB-LAN/8700"
+  unique_id: "esp_bsblan_8700"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  unit_of_measurement: °C
+  device_class: temperature
+
+- name: "Etat du circuit de chauffage"
+  unique_id: "esp_bsblan_8000"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/8000"
+  
+- name: "Etat ECS"
+  unique_id: "esp_bsblan_8003"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/8003"
+  
+- name: "Etat PAC"
+  unique_id: "esp_bsblan_8006"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/8006"
+  
+- name: "Temp de retour PAC"
+  unique_id: "esp_bsblan_8410"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/8410"
+  unit_of_measurement: °C
+  device_class: temperature
+  
+- name: "Temp de départ PAC"
+  unique_id: "esp_bsblan_8412"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/8412"
+  unit_of_measurement: °C
+  device_class: temperature
+  
+- name: "Temp thermosat interieur"
+  unique_id: "esp_bsblan_8740"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/8740"
+  unit_of_measurement: °C
+  device_class: temperature
+  
+- name: "Etat pompe ECS"
+  unique_id: "esp_bsblan_8820"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/8820"
+  
+- name: "Etat résistance électrique ECS"
+  unique_id: "esp_bsblan_8821"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/8821"
+  
+- name: "Temp mesurée ECS"
+  unique_id: "esp_bsblan_8830"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/8830"
+  unit_of_measurement: °C
+  device_class: temperature
+  
+- name: "PAC conso total"
+  unique_id: "esp_bsblan_3113"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/3113"
+  value_template: "{{ value | regex_replace(find=' kwh', replace='', ignorecase=True) }}"
+  unit_of_measurement: 'kWh' 
+  device_class: power
+  
+- name: "PAC conso total2"
+  unique_id: "esp_bsblan_3124"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/3124"
+  value_template: "{{ value | regex_replace(find=' kwh', replace='', ignorecase=True) }}"
+  unit_of_measurement: 'kWh' 
+  device_class: power
+  
+- name: "ECS conso total"
+  unique_id: "esp_bsblan_3125"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  state_topic: "BSB-LAN/3125"
+  value_template: "{{ value | regex_replace(find=' kwh', replace='', ignorecase=True) }}"
+  unit_of_measurement: 'kWh' 
+  device_class: power

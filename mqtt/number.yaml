@@ -1,0 +1,20 @@
+- name: "Temp consigne ECS"
+  unique_id: "esp_bsblan_1610"
+  state_topic: "BSB-LAN/1610"
+  command_topic: "BSB-LAN"
+  command_template: "S1610={{ value }}"
+  mode: slider
+  min: 40
+  max: 65
+  step: 1
+  unit_of_measurement: °C
+  device_class: temperature
+  icon: mdi:temperature-celsius
+  availability_topic: "BSB-LAN/status"
+  entity_category: "config"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"

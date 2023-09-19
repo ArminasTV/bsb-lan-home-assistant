@@ -1,0 +1,33 @@
+############################################################
+##                         MQTT  BSB LAN                  ##
+############################################################
+- name: "Pompe à chaleur"
+  unique_id: "esp_bsblan_climate"
+  device:
+    name: "esp-bsblan"
+    configuration_url : "http://192.168.1.200"
+    identifiers: "ESP32BSBLAN"
+    model: "esp32dev"
+    manufacturer : "Espressif"
+  payload_on: 1
+  payload_off: 0
+  modes:
+    - auto
+    - heat
+    - cool
+    - 'off'
+  mode_state_topic: "BSB-LAN/700"
+  mode_state_template: >-
+     {% set values = { '0 - Mode protection':'off', '1 - Automatique':'auto', '2 - Réduit':'cool', '3 - Confort':'heat'} %}
+     {{ values[value] if value in values.keys() else 'off' }}
+  mode_command_topic: "BSB-LAN"
+  mode_command_template: >-
+     {% set values = { 'off':'S700=0', 'auto':'S700=1', 'cool':'S700=2', 'heat':'S700=3'} %}
+     {{ values[value] if value in values.keys() else '0' }}
+  current_temperature_topic: "BSB-LAN/8740"
+  min_temp: 17
+  max_temp: 24
+  temp_step: 0.5
+  temperature_state_topic: "BSB-LAN/710"
+  temperature_command_topic: "BSB-LAN"
+  temperature_command_template: "{{'S710='+ (value| string)}}"
