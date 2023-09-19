@@ -1,0 +1,1 @@
+# bsb-lan-home-assistant
