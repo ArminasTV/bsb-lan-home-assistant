@@ -167,29 +167,3 @@
   value_template: "{{ value | regex_replace(find=' kwh', replace='', ignorecase=True) }}"
   unit_of_measurement: 'kWh' 
   device_class: power
-  
-- name: "PAC conso total2"
-  unique_id: "esp_bsblan_3124"
-  device:
-    name: "esp-bsblan"
-    configuration_url : "http://192.168.1.200"
-    identifiers: "ESP32BSBLAN"
-    model: "esp32dev"
-    manufacturer : "Espressif"
-  state_topic: "BSB-LAN/3124"
-  value_template: "{{ value | regex_replace(find=' kwh', replace='', ignorecase=True) }}"
-  unit_of_measurement: 'kWh' 
-  device_class: power
-  
-- name: "ECS conso total"
-  unique_id: "esp_bsblan_3125"
-  device:
-    name: "esp-bsblan"
-    configuration_url : "http://192.168.1.200"
-    identifiers: "ESP32BSBLAN"
-    model: "esp32dev"
-    manufacturer : "Espressif"
-  state_topic: "BSB-LAN/3125"
-  value_template: "{{ value | regex_replace(find=' kwh', replace='', ignorecase=True) }}"
-  unit_of_measurement: 'kWh' 
-  device_class: power
