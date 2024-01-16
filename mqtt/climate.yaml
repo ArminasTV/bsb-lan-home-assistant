@@ -1,14 +1,11 @@
+---
 ############################################################
 ##                         MQTT  BSB LAN                  ##
 ############################################################
 - name: "Pompe à chaleur"
   unique_id: "esp_bsblan_climate"
   device:
-    name: "esp-bsblan"
-    configuration_url : "http://192.168.1.200"
     identifiers: "ESP32BSBLAN"
-    model: "esp32dev"
-    manufacturer : "Espressif"
   payload_on: 1
   payload_off: 0
   modes:

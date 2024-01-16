@@ -1,14 +1,16 @@
+---
 ############################################################
 ##                         MQTT  BSB lan bouton           ##
 ############################################################
 - name: "PAC mode auto"  
   unique_id: "esp_bsblan_btn_700"
   device:
+    identifiers: "ESP32BSBLAN"
     name: "esp-bsblan"
     configuration_url : "http://192.168.1.200"
-    identifiers: "ESP32BSBLAN"
-    model: "esp32dev"
-    manufacturer : "Espressif"
+    model: "BSB-LAN on ESP32"
+    manufacturer : "Frederik Holst"
+    sw_version: "3.2"
   command_topic: "BSB-LAN"
   payload_press: "S700=1"
   availability:

@@ -1,3 +1,4 @@
+---
 - name: "Temp consigne ECS"
   unique_id: "esp_bsblan_1610"
   state_topic: "BSB-LAN/1610"
@@ -13,8 +14,4 @@
   availability_topic: "BSB-LAN/status"
   entity_category: "config"
   device:
-    name: "esp-bsblan"
-    configuration_url : "http://192.168.1.200"
     identifiers: "ESP32BSBLAN"
-    model: "esp32dev"
-    manufacturer : "Espressif"
